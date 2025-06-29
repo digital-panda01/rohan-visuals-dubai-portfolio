@@ -45,8 +45,8 @@ const ContactSection = () => {
     {
       icon: Phone,
       label: "Phone",
-      value: "+977 XXX-XXX-XXXX",
-      href: "tel:+977XXXXXXXXX"
+      value: "+977 9848534297",
+      href: "tel:+9779848534297"
     },
     {
       icon: MapPin,
