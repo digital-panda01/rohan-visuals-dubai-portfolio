@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { GraduationCap, MapPin, Heart } from 'lucide-react';
-
 const AboutSection = () => {
-  return (
-    <section id="about" className="section-spacing bg-white">
+  return <section id="about" className="section-spacing bg-white">
       <div className="max-w-7xl mx-auto container-padding">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Profile Image */}
@@ -12,11 +9,7 @@ const AboutSection = () => {
             <div className="relative">
               <div className="w-full max-w-md mx-auto">
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
-                  <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=face"
-                    alt="Rohan Maharjan - Profile Photo"
-                    className="w-full h-full object-cover"
-                  />
+                  <img alt="Rohan Maharjan - Profile Photo" className="w-full h-full object-cover" src="/lovable-uploads/16ac3188-3c01-44df-9f1e-0d0b79057ce5.jpg" />
                 </div>
                 {/* Decorative elements */}
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-portfolio-highlight rounded-full opacity-60"></div>
@@ -75,8 +68,6 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
