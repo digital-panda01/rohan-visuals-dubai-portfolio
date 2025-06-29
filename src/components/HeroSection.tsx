@@ -21,6 +21,22 @@ const HeroSection = () => {
 
       <div className="max-w-7xl mx-auto container-padding text-center relative z-10">
         <div className="animate-fade-in">
+          {/* Profile Photo */}
+          <div className="mb-8 flex justify-center">
+            <div className="relative">
+              <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-portfolio-primary shadow-2xl">
+                <img 
+                  src="/lovable-uploads/7d410924-d347-4c3e-a21e-d6ed3a1f1e81.png" 
+                  alt="Rohan Maharjan - Graphic Designer & Photographer"
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+              <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-portfolio-accent rounded-full flex items-center justify-center border-4 border-white shadow-lg">
+                <span className="text-white font-bold text-lg">RM</span>
+              </div>
+            </div>
+          </div>
+
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-portfolio-primary mb-6 leading-tight">
             Designing Stories
