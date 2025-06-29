@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, Linkedin } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
@@ -39,8 +38,8 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "rohan.maharjan@email.com",
-      href: "mailto:rohan.maharjan@email.com"
+      value: "maharjan01rohan@gmail.com",
+      href: "mailto:maharjan01rohan@gmail.com"
     },
     {
       icon: Phone,
@@ -86,7 +85,6 @@ const ContactSection = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
             
@@ -159,7 +157,6 @@ const ContactSection = () => {
             </form>
           </div>
 
-          {/* Contact Information */}
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
@@ -194,7 +191,6 @@ const ContactSection = () => {
               })}
             </div>
 
-            {/* Call to Action */}
             <div className="bg-portfolio-accent/20 rounded-xl p-6 mt-8">
               <div className="flex items-center gap-3 mb-4">
                 <CheckCircle className="h-6 w-6 text-portfolio-highlight" />
@@ -205,7 +201,7 @@ const ContactSection = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
-                  href="mailto:rohan.maharjan@email.com"
+                  href="mailto:maharjan01rohan@gmail.com"
                   className="bg-portfolio-highlight text-portfolio-primary px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all text-center"
                 >
                   Email Me
