@@ -56,17 +56,17 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section className="section-spacing bg-gradient-to-b from-white to-portfolio-bg/30">
+    <section className="section-spacing bg-gray-800">
       <div className="max-w-7xl mx-auto container-padding">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Star className="h-5 w-5 text-portfolio-accent" />
             <span className="text-portfolio-accent font-semibold">Experience</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-portfolio-primary mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Professional Journey
           </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             From founding my own creative studio to collaborating with diverse clients, each experience has shaped my expertise in design and photography.
           </p>
         </div>
@@ -75,8 +75,8 @@ const ExperienceSection = () => {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className={`relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden ${
-                exp.highlight ? 'ring-2 ring-portfolio-accent' : ''
+              className={`relative bg-gray-900/80 border border-gray-700 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden ${
+                exp.highlight ? 'ring-2 ring-portfolio-accent/50' : ''
               }`}
             >
               {exp.highlight && (
@@ -86,7 +86,7 @@ const ExperienceSection = () => {
               <div className="p-6 md:p-8">
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                   <div>
-                    <h3 className="text-xl md:text-2xl font-bold text-portfolio-primary mb-2">
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
                       {exp.title}
                     </h3>
                     <div className="flex items-center gap-2 text-portfolio-accent font-semibold mb-2">
@@ -95,11 +95,11 @@ const ExperienceSection = () => {
                     </div>
                   </div>
                   <div className="flex flex-col md:items-end">
-                    <div className="flex items-center gap-2 text-gray-600 mb-1">
+                    <div className="flex items-center gap-2 text-gray-400 mb-1">
                       <Calendar className="h-4 w-4" />
                       {exp.duration}
                     </div>
-                    <span className="text-sm bg-portfolio-highlight/20 text-portfolio-primary px-3 py-1 rounded-full">
+                    <span className="text-sm bg-portfolio-accent/20 text-portfolio-accent px-3 py-1 rounded-full">
                       {exp.type}
                     </span>
                   </div>
@@ -109,7 +109,7 @@ const ExperienceSection = () => {
                   {exp.responsibilities.map((resp, respIndex) => (
                     <div key={respIndex} className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-portfolio-accent rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-gray-700">{resp}</p>
+                      <p className="text-gray-300">{resp}</p>
                     </div>
                   ))}
                 </div>
@@ -120,11 +120,11 @@ const ExperienceSection = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <div className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-portfolio-primary mb-4">
+          <div className="bg-gray-900/80 border border-gray-700 rounded-2xl shadow-lg p-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-4">
               Ready for New Opportunities
             </h3>
-            <p className="text-gray-700 mb-6">
+            <p className="text-gray-300 mb-6">
               Looking to bring my diverse experience and creative passion to innovative projects in Dubai's dynamic market.
             </p>
             <button

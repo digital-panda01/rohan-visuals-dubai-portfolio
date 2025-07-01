@@ -8,7 +8,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white py-12 relative">
+    <footer className="bg-gray-900 border-t border-gray-800 text-white py-12 relative">
       <div className="max-w-7xl mx-auto container-padding">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}

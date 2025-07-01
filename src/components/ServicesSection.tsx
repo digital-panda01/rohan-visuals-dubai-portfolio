@@ -43,17 +43,17 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="section-spacing bg-white">
+    <section id="services" className="section-spacing bg-gray-900">
       <div className="max-w-7xl mx-auto container-padding">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Palette className="h-5 w-5 text-portfolio-accent" />
             <span className="text-portfolio-accent font-semibold">Services</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-portfolio-primary mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             What I Offer
           </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             From brand identity to event photography, I provide comprehensive creative solutions that help businesses and individuals tell their stories effectively.
           </p>
         </div>
@@ -64,17 +64,17 @@ const ServicesSection = () => {
             return (
               <div
                 key={index}
-                className="bg-gradient-to-br from-white to-portfolio-bg/30 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group"
+                className="bg-gray-800/50 border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group"
               >
-                <div className="bg-portfolio-primary/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-portfolio-accent/10 transition-colors">
+                <div className="bg-portfolio-primary/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-portfolio-accent/20 transition-colors">
                   <IconComponent className="h-8 w-8 text-portfolio-primary group-hover:text-portfolio-accent transition-colors" />
                 </div>
                 
-                <h3 className="text-xl font-bold text-portfolio-primary mb-4">
+                <h3 className="text-xl font-bold text-white mb-4">
                   {service.title}
                 </h3>
                 
-                <p className="text-gray-700 mb-6 leading-relaxed">
+                <p className="text-gray-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
                 
@@ -82,7 +82,7 @@ const ServicesSection = () => {
                   {service.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-portfolio-accent rounded-full"></div>
-                      <span className="text-sm text-gray-600">{feature}</span>
+                      <span className="text-sm text-gray-400">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -94,10 +94,10 @@ const ServicesSection = () => {
         {/* Process Section */}
         <div className="mt-20">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-portfolio-primary mb-4">
+            <h3 className="text-3xl font-bold text-white mb-4">
               My Creative Process
             </h3>
-            <p className="text-gray-700 max-w-2xl mx-auto">
+            <p className="text-gray-300 max-w-2xl mx-auto">
               Every project follows a structured approach to ensure quality results and client satisfaction.
             </p>
           </div>
@@ -113,10 +113,10 @@ const ServicesSection = () => {
                 <div className="bg-portfolio-primary text-white w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                   {process.step}
                 </div>
-                <h4 className="text-lg font-semibold text-portfolio-primary mb-2">
+                <h4 className="text-lg font-semibold text-white mb-2">
                   {process.title}
                 </h4>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-400">
                   {process.desc}
                 </p>
               </div>

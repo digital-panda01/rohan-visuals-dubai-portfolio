@@ -63,11 +63,11 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom portfolio colors
+				// Custom portfolio colors for dark theme
 				'portfolio-primary': '#205781',
 				'portfolio-accent': '#4F959D',
 				'portfolio-highlight': '#98D2C0',
-				'portfolio-bg': '#F6F8D5'
+				'portfolio-bg': '#1a1a1a'
 			},
 			fontFamily: {
 				'garamond': ['ITC Garamond Heavy', 'serif'],
