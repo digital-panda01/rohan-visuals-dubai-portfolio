@@ -70,7 +70,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-portfolio-primary shadow-2xl ring-4 ring-gray-700/50">
                 <img 
-                  src="/lovable-uploads/7d410924-d347-4c3e-a21e-d6ed3a1f1e81.png" 
+                  src="/lovable-uploads/64b5c226-d742-4e6f-ba17-adf1c91284ac.png" 
                   alt="Rohan Maharjan - Graphic Designer & Photographer"
                   className="w-full h-full object-cover object-center"
                 />
