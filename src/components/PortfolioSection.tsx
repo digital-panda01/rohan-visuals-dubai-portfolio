@@ -84,10 +84,10 @@ const PortfolioSection = () => {
             <Eye className="h-5 w-5 text-portfolio-accent" />
             <span className="text-portfolio-accent font-semibold">Portfolio</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-portfolio-primary mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Featured Work
           </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+          <p className="text-lg text-white max-w-3xl mx-auto">
             A curated selection of projects showcasing my expertise in branding, social media design, and photography across various industries.
           </p>
         </div>
