@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
 
@@ -13,13 +14,7 @@ const HeroSection = () => {
     <section id="home" className="min-h-screen hero-gradient flex items-center justify-center relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-32 h-32 border-2 border-portfolio-primary rounded-full overflow-hidden">
-          <img 
-            src="/lovable-uploads/7d410924-d347-4c3e-a21e-d6ed3a1f1e81.png" 
-            alt="Rohan Maharjan"
-            className="w-full h-full object-cover object-center"
-          />
-        </div>
+        <div className="absolute top-20 left-20 w-32 h-32 border-2 border-portfolio-primary rounded-full"></div>
         <div className="absolute bottom-40 right-20 w-24 h-24 border-2 border-portfolio-accent rounded-full"></div>
         <div className="absolute top-1/2 left-10 w-16 h-16 border-2 border-portfolio-highlight rounded-full"></div>
       </div>
