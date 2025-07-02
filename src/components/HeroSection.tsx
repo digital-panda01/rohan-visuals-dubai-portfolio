@@ -163,9 +163,8 @@ const HeroSection = () => {
                 {brandBg ? (
                   <img src={brandBg} alt="Brand Identity Thumbnail" className="absolute inset-0 w-full h-full object-cover" />
                 ) : (
-                  <img src="/placeholder.svg" alt="Brand Identity Placeholder" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+                  <img src="/placeholder.svg" alt="Brand Identity Placeholder" className="absolute inset-0 w-full h-full object-cover opacity-80" />
                 )}
-                <div className="absolute inset-0 bg-gradient-to-br from-portfolio-primary to-portfolio-accent opacity-70 group-hover:opacity-60 transition" />
                 <span className="relative z-10 text-xs text-white bg-gray-900/60 px-2 py-1 rounded shadow mt-32 group-hover:opacity-100 opacity-0 transition">Drag & drop or click to upload</span>
               </div>
               <div className="p-4">
@@ -192,9 +191,8 @@ const HeroSection = () => {
                 {socialMediaBg ? (
                   <img src={socialMediaBg} alt="Social Media Thumbnail" className="absolute inset-0 w-full h-full object-cover" />
                 ) : (
-                  <img src="/placeholder.svg" alt="Social Media Placeholder" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+                  <img src="/placeholder.svg" alt="Social Media Placeholder" className="absolute inset-0 w-full h-full object-cover opacity-80" />
                 )}
-                <div className="absolute inset-0 bg-gradient-to-br from-portfolio-accent to-portfolio-highlight opacity-70 group-hover:opacity-60 transition" />
                 <span className="relative z-10 text-xs text-white bg-gray-900/60 px-2 py-1 rounded shadow mt-32 group-hover:opacity-100 opacity-0 transition">Drag & drop or click to upload</span>
               </div>
               <div className="p-4">
@@ -221,9 +219,8 @@ const HeroSection = () => {
                 {photoBg ? (
                   <img src={photoBg} alt="Photography Thumbnail" className="absolute inset-0 w-full h-full object-cover" />
                 ) : (
-                  <img src="/placeholder.svg" alt="Photography Placeholder" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+                  <img src="/creative-marketing-agency.jpg" alt="Photography Placeholder" className="absolute inset-0 w-full h-full object-cover" />
                 )}
-                <div className="absolute inset-0 bg-gradient-to-br from-portfolio-highlight to-portfolio-bg opacity-70 group-hover:opacity-60 transition" />
                 <span className="relative z-10 text-xs text-white bg-gray-900/60 px-2 py-1 rounded shadow mt-32 group-hover:opacity-100 opacity-0 transition">Drag & drop or click to upload</span>
               </div>
               <div className="p-4">
