@@ -1,8 +1,18 @@
-
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Calendar, MapPin, Star } from 'lucide-react';
+import { motion, useAnimation, useInView } from 'framer-motion';
 
 const ExperienceSection = () => {
+  const sectionRef = useRef(null);
+  const sectionInView = useInView(sectionRef, { once: true });
+  const sectionControls = useAnimation();
+
+  useEffect(() => {
+    if (sectionInView) {
+      sectionControls.start('visible');
+    }
+  }, [sectionInView, sectionControls]);
+
   const experiences = [
     {
       title: "Founder",
@@ -56,7 +66,16 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section className="section-spacing bg-gray-800">
+    <motion.section
+      ref={sectionRef}
+      initial="hidden"
+      animate={sectionControls}
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } }
+      }}
+      className="section-spacing bg-gray-900"
+    >
       <div className="max-w-7xl mx-auto container-padding">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
@@ -136,7 +155,7 @@ const ExperienceSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

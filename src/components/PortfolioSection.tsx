@@ -1,9 +1,19 @@
-
-import React, { useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Eye, ExternalLink } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { motion, useAnimation, useInView } from 'framer-motion';
 
 const PortfolioSection = () => {
   const [activeFilter, setActiveFilter] = useState('all');
+  const sectionRef = useRef(null);
+  const sectionInView = useInView(sectionRef, { once: true });
+  const sectionControls = useAnimation();
+
+  useEffect(() => {
+    if (sectionInView) {
+      sectionControls.start('visible');
+    }
+  }, [sectionInView, sectionControls]);
 
   const projects = [
     {
@@ -77,7 +87,16 @@ const PortfolioSection = () => {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="portfolio" className="section-spacing bg-gradient-to-b from-portfolio-bg/30 to-white">
+    <motion.section
+      ref={sectionRef}
+      initial="hidden"
+      animate={sectionControls}
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } }
+      }}
+      className="section-spacing bg-gradient-to-b from-portfolio-bg/30 to-white"
+    >
       <div className="max-w-7xl mx-auto container-padding">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
@@ -112,32 +131,60 @@ const PortfolioSection = () => {
         {/* Portfolio Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
-            <div
-              key={project.id}
-              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group"
-            >
-              <div className="relative overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-portfolio-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <button className="bg-white text-portfolio-primary p-3 rounded-full hover:scale-110 transition-transform">
-                    <ExternalLink className="h-5 w-5" />
-                  </button>
+            project.title === "Mountain Resort Branding" ? (
+              <Link
+                key={project.id}
+                to="/mountain-resort-branding"
+                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group block"
+              >
+                <div className="relative overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-portfolio-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span className="bg-white text-portfolio-primary p-3 rounded-full hover:scale-110 transition-transform">
+                      <ExternalLink className="h-5 w-5" />
+                    </span>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-portfolio-primary mb-3">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    {project.description}
+                  </p>
+                </div>
+              </Link>
+            ) : (
+              <div
+                key={project.id}
+                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group"
+              >
+                <div className="relative overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-portfolio-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <button className="bg-white text-portfolio-primary p-3 rounded-full hover:scale-110 transition-transform">
+                      <ExternalLink className="h-5 w-5" />
+                    </button>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-portfolio-primary mb-3">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    {project.description}
+                  </p>
                 </div>
               </div>
-              
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-portfolio-primary mb-3">
-                  {project.title}
-                </h3>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  {project.description}
-                </p>
-              </div>
-            </div>
+            )
           ))}
         </div>
 
@@ -159,7 +206,7 @@ const PortfolioSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

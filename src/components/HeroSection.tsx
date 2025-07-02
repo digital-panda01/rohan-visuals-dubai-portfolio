@@ -1,8 +1,41 @@
-
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { ChevronDown, Camera, Monitor, Cpu } from 'lucide-react';
 
 const HeroSection = () => {
+  const [brandBg, setBrandBg] = useState<string | null>(null);
+  const [socialMediaBg, setSocialMediaBg] = useState<string | null>(null);
+  const [photoBg, setPhotoBg] = useState<string | null>(null);
+  const brandInputRef = useRef<HTMLInputElement>(null);
+  const socialInputRef = useRef<HTMLInputElement>(null);
+  const photoInputRef = useRef<HTMLInputElement>(null);
+
+  const handleDrop = (e: React.DragEvent<HTMLDivElement>, setBg: (src: string) => void) => {
+    e.preventDefault();
+    const file = e.dataTransfer.files[0];
+    if (file && file.type.startsWith('image/')) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        setBg(event.target?.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>, setBg: (src: string) => void) => {
+    const file = e.target.files?.[0];
+    if (file && file.type.startsWith('image/')) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        setBg(event.target?.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   const scrollToAbout = () => {
     const element = document.getElementById('about');
     if (element) {
@@ -111,22 +144,88 @@ const HeroSection = () => {
 
           {/* Featured Work Preview */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
+            {/* Brand Identity Card */}
             <div className="bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-700">
-              <div className="h-48 bg-gradient-to-br from-portfolio-primary to-portfolio-accent"></div>
+              <div
+                className="h-48 w-full relative flex items-center justify-center cursor-pointer group"
+                onDrop={e => handleDrop(e, src => setBrandBg(src))}
+                onDragOver={handleDragOver}
+                onClick={() => brandInputRef.current?.click()}
+                title="Drag and drop a thumbnail image here or click to select"
+              >
+                <input
+                  type="file"
+                  accept="image/*"
+                  ref={brandInputRef}
+                  className="hidden"
+                  onChange={e => handleFileChange(e, src => setBrandBg(src))}
+                />
+                {brandBg ? (
+                  <img src={brandBg} alt="Brand Identity Thumbnail" className="absolute inset-0 w-full h-full object-cover" />
+                ) : (
+                  <img src="/placeholder.svg" alt="Brand Identity Placeholder" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-br from-portfolio-primary to-portfolio-accent opacity-70 group-hover:opacity-60 transition" />
+                <span className="relative z-10 text-xs text-white bg-gray-900/60 px-2 py-1 rounded shadow mt-32 group-hover:opacity-100 opacity-0 transition">Drag & drop or click to upload</span>
+              </div>
               <div className="p-4">
                 <h3 className="font-semibold text-white">Brand Identity</h3>
                 <p className="text-sm text-gray-400">Creative logo design & branding</p>
               </div>
             </div>
+            {/* Social Media Card */}
             <div className="bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-700">
-              <div className="h-48 bg-gradient-to-br from-portfolio-accent to-portfolio-highlight"></div>
+              <div
+                className="h-48 w-full relative flex items-center justify-center cursor-pointer group"
+                onDrop={e => handleDrop(e, src => setSocialMediaBg(src))}
+                onDragOver={handleDragOver}
+                onClick={() => socialInputRef.current?.click()}
+                title="Drag and drop a thumbnail image here or click to select"
+              >
+                <input
+                  type="file"
+                  accept="image/*"
+                  ref={socialInputRef}
+                  className="hidden"
+                  onChange={e => handleFileChange(e, src => setSocialMediaBg(src))}
+                />
+                {socialMediaBg ? (
+                  <img src={socialMediaBg} alt="Social Media Thumbnail" className="absolute inset-0 w-full h-full object-cover" />
+                ) : (
+                  <img src="/placeholder.svg" alt="Social Media Placeholder" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-br from-portfolio-accent to-portfolio-highlight opacity-70 group-hover:opacity-60 transition" />
+                <span className="relative z-10 text-xs text-white bg-gray-900/60 px-2 py-1 rounded shadow mt-32 group-hover:opacity-100 opacity-0 transition">Drag & drop or click to upload</span>
+              </div>
               <div className="p-4">
                 <h3 className="font-semibold text-white">Social Media</h3>
                 <p className="text-sm text-gray-400">Engaging post designs</p>
               </div>
             </div>
+            {/* Photography Card */}
             <div className="bg-gray-800/80 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-700">
-              <div className="h-48 bg-gradient-to-br from-portfolio-highlight to-portfolio-bg"></div>
+              <div
+                className="h-48 w-full relative flex items-center justify-center cursor-pointer group"
+                onDrop={e => handleDrop(e, src => setPhotoBg(src))}
+                onDragOver={handleDragOver}
+                onClick={() => photoInputRef.current?.click()}
+                title="Drag and drop a thumbnail image here or click to select"
+              >
+                <input
+                  type="file"
+                  accept="image/*"
+                  ref={photoInputRef}
+                  className="hidden"
+                  onChange={e => handleFileChange(e, src => setPhotoBg(src))}
+                />
+                {photoBg ? (
+                  <img src={photoBg} alt="Photography Thumbnail" className="absolute inset-0 w-full h-full object-cover" />
+                ) : (
+                  <img src="/placeholder.svg" alt="Photography Placeholder" className="absolute inset-0 w-full h-full object-cover opacity-30" />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-br from-portfolio-highlight to-portfolio-bg opacity-70 group-hover:opacity-60 transition" />
+                <span className="relative z-10 text-xs text-white bg-gray-900/60 px-2 py-1 rounded shadow mt-32 group-hover:opacity-100 opacity-0 transition">Drag & drop or click to upload</span>
+              </div>
               <div className="p-4">
                 <h3 className="font-semibold text-white">Photography</h3>
                 <p className="text-sm text-gray-400">Wedding & event photography</p>

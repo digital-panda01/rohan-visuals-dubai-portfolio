@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { GraduationCap, MapPin, Heart } from 'lucide-react';
 
@@ -13,7 +12,7 @@ const AboutSection = () => {
               <div className="w-full max-w-md mx-auto">
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl border border-gray-800">
                   <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=face"
+                    src="/lovable-uploads/7d410924-d347-4c3e-a21e-d6ed3a1f1e81.png"
                     alt="Rohan Maharjan - Profile Photo"
                     className="w-full h-full object-cover"
                   />

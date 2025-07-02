@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Palette, Camera, Share2, Printer, Building, Users } from 'lucide-react';
 

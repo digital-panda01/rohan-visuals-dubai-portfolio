@@ -1,14 +1,41 @@
-
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Heart, ArrowUp } from 'lucide-react';
+import { motion, useAnimation, useInView } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const footerRef = useRef(null);
+  const footerInView = useInView(footerRef, { once: true });
+  const footerControls = useAnimation();
+
+  useEffect(() => {
+    if (footerInView) {
+      footerControls.start('visible');
+    }
+  }, [footerInView, footerControls]);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <footer className="bg-gray-900 border-t border-gray-800 text-white py-12 relative">
+    <motion.footer
+      ref={footerRef}
+      initial="hidden"
+      animate={footerControls}
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } }
+      }}
+      className="bg-gray-900 border-t border-gray-800 text-white py-12 relative"
+    >
       <div className="max-w-7xl mx-auto container-padding">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
@@ -26,15 +53,25 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <div className="space-y-2">
-              {['Home', 'About', 'Services', 'Portfolio', 'Contact'].map((link) => (
-                <button
-                  key={link}
-                  onClick={() => document.getElementById(link.toLowerCase())?.scrollIntoView({ behavior: 'smooth' })}
-                  className="block text-gray-400 hover:text-white transition-colors"
-                >
-                  {link}
-                </button>
-              ))}
+              {['Home', 'About', 'Services', 'Portfolio', 'Contact'].map((link) =>
+                link === 'Portfolio' ? (
+                  <Link
+                    key={link}
+                    to="/portfolio"
+                    className="block text-gray-400 hover:text-white transition-colors"
+                  >
+                    {link}
+                  </Link>
+                ) : (
+                  <button
+                    key={link}
+                    onClick={() => scrollToSection(link.toLowerCase())}
+                    className="block text-gray-400 hover:text-white transition-colors"
+                  >
+                    {link}
+                  </button>
+                )
+              )}
             </div>
           </div>
 
@@ -68,7 +105,7 @@ const Footer = () => {
       >
         <ArrowUp className="h-5 w-5" />
       </button>
-    </footer>
+    </motion.footer>
   );
 };
 
