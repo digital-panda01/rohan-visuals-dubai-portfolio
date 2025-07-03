@@ -1,8 +1,9 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-const profilePhoto = '/public/placeholder.svg'; // Use your real photo if available
+const profilePhoto = '/lovable-uploads/1a0fe208-0a8c-446a-bf57-7ea3233b65a9.png';
 
 const HeroSection = () => {
   return (
