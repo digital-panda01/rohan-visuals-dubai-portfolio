@@ -1,33 +1,25 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { portfolioProjects } from '@/data/portfolioProjects';
-
 const PortfolioProjectPage = () => {
-  const { projectId } = useParams();
+  const {
+    projectId
+  } = useParams();
   const project = portfolioProjects.find(p => p.id === projectId);
-
   if (!project) {
-    return (
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+    return <div className="min-h-screen bg-gray-900 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Project Not Found</h1>
           <Link to="/portfolio" className="text-blue-400 hover:text-blue-300 underline">
             Back to Portfolio
           </Link>
         </div>
-      </div>
-    );
+      </div>;
   }
-
-  return (
-    <div className="min-h-screen bg-gray-900 py-20">
-      <div className="max-w-4xl mx-auto container-padding">
-        <Link 
-          to="/portfolio" 
-          className="inline-flex items-center text-gray-300 hover:text-white mb-8 transition-colors"
-        >
+  return <div className="min-h-screen bg-gray-900 py-20">
+      <div className="grid mx-auto container-padding">
+        <Link to="/portfolio" className="inline-flex items-center text-gray-300 hover:text-white mb-8 transition-colors">
           <ArrowLeft className="h-4 w-4 mr-2" />
           Back to Portfolio
         </Link>
@@ -51,30 +43,16 @@ const PortfolioProjectPage = () => {
         <div className="mb-8">
           <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
           <div className="flex flex-wrap gap-2">
-            {project.services.map((service, index) => (
-              <span 
-                key={index}
-                className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm"
-              >
+            {project.services.map((service, index) => <span key={index} className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm">
                 {service}
-              </span>
-            ))}
+              </span>)}
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {project.images.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`${project.title} ${index + 1}`}
-              className="rounded-lg shadow-lg w-full h-64 object-cover"
-            />
-          ))}
+          {project.images.map((image, index) => <img key={index} src={image} alt={`${project.title} ${index + 1}`} className="rounded-lg shadow-lg w-full h-64 object-cover" />)}
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default PortfolioProjectPage;
