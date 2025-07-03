@@ -1,3 +1,4 @@
+
 export const portfolioProjects = [
   {
     id: "restaurant-branding",
@@ -57,17 +58,23 @@ export const portfolioProjects = [
     services: ["Wedding Photography", "Event Photography", "Photo Editing"]
   },
   {
-    id: "community-art-project",
-    title: "Community Art Project",
-    description: "Collaborative mural painting and art installation for a local community center, engaging youth and artists.",
-    category: "community",
+    id: "music-festival",
+    title: "Music Festival",
+    description: "Dynamic photography and visual documentation of live music performances, capturing the energy and atmosphere of music festivals and concerts.",
+    category: "photography",
     images: [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1464983953574-0892a716854b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "/lovable-uploads/2015969d-3dde-4688-bc27-c33975e3a93e.png",
+      "/lovable-uploads/beda320a-e049-4b27-8256-101a5d71adcc.png",
+      "/lovable-uploads/eeefec0a-b203-4a7a-8f2a-426fede0d5bd.png",
+      "/lovable-uploads/31a17d55-5487-40e7-a07e-276694cc5a66.png",
+      "/lovable-uploads/abe1d9a4-6007-4b3f-89a0-726e77a73696.png",
+      "/lovable-uploads/48b5b79c-3c47-495c-87d3-e59f35dc7fb0.png",
+      "/lovable-uploads/ba20d843-8347-4ea0-afcf-523788efc95f.png",
+      "/lovable-uploads/d49e5cf2-a884-4178-9beb-c18ec54edcf5.png"
     ],
-    client: "City Arts Council",
-    year: "2022",
-    services: ["Community Engagement", "Mural Design", "Event Coordination"]
+    client: "Various Music Events",
+    year: "2022-2024",
+    services: ["Event Photography", "Concert Photography", "Live Performance Documentation"]
   },
   {
     id: "corporate-brand-refresh",
