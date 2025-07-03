@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { portfolioProjects } from '@/data/portfolioProjects';
@@ -7,6 +7,7 @@ import { portfolioProjects } from '@/data/portfolioProjects';
 const PortfolioProjectPage = () => {
   const { projectId } = useParams();
   const project = portfolioProjects.find(p => p.id === projectId);
+  const [selectedImage, setSelectedImage] = useState(0);
 
   if (!project) {
     return (
@@ -62,15 +63,33 @@ const PortfolioProjectPage = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Featured Image Display */}
+        <div className="mb-8">
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden flex items-center justify-center min-h-[500px]">
+            <img
+              src={project.images[selectedImage]}
+              alt={`${project.title} ${selectedImage + 1}`}
+              className="max-w-full max-h-full object-contain"
+            />
+          </div>
+        </div>
+
+        {/* Image Thumbnails */}
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
           {project.images.map((image, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden flex items-center justify-center min-h-[400px]">
+            <button
+              key={index}
+              onClick={() => setSelectedImage(index)}
+              className={`bg-white rounded-lg shadow-lg overflow-hidden flex items-center justify-center min-h-[120px] transition-all duration-300 ${
+                selectedImage === index ? 'ring-4 ring-blue-500 scale-105' : 'hover:scale-105'
+              }`}
+            >
               <img
                 src={image}
                 alt={`${project.title} ${index + 1}`}
                 className="max-w-full max-h-full object-contain"
               />
-            </div>
+            </button>
           ))}
         </div>
       </div>
