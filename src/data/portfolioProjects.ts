@@ -5,8 +5,8 @@ export const portfolioProjects = [
     description: "Complete brand identity design for a modern restaurant including logo, menu design, and social media assets.",
     category: "branding",
     images: [
-      "/lovable-uploads/1d557a63-6be7-4f27-b2cb-1b41082a004c.png",
       "/lovable-uploads/1cf5658e-f86b-438d-b008-3fe8233c4798.png",
+      "/lovable-uploads/1d557a63-6be7-4f27-b2cb-1b41082a004c.png",
       "/lovable-uploads/0e7f018f-f405-4a82-b821-ddd71e1f0b4f.png",
       "/lovable-uploads/af8529ba-f286-496c-879b-3427bcbcfe65.png",
       "/lovable-uploads/d12d670f-bb58-42d2-8640-37e749210123.png",
@@ -45,8 +45,12 @@ export const portfolioProjects = [
     description: "Capturing beautiful moments of couples in traditional and modern wedding ceremonies.",
     category: "photography",
     images: [
-      "https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "/lovable-uploads/b3f8ffdf-f103-4196-8895-9f8591b7f293.png",
+      "/lovable-uploads/40dbfe7c-446c-4e7b-84d4-d959f926674a.png",
+      "/lovable-uploads/531cc491-eb92-45b1-b33f-50ffdf069610.png",
+      "/lovable-uploads/a7d56fde-74b1-4ca1-bfc2-6cd5cfbc3ab8.png",
+      "/lovable-uploads/bfe67a0a-88c4-40b6-8bd5-c67f319935ef.png",
+      "/lovable-uploads/eda28c4d-4d50-4880-af67-dc5cc40a1532.png"
     ],
     client: "Various Couples",
     year: "2022-2023",
