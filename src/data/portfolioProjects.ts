@@ -1,4 +1,3 @@
-
 export const portfolioProjects = [
   {
     id: "restaurant-branding",
@@ -77,17 +76,21 @@ export const portfolioProjects = [
     services: ["Event Photography", "Concert Photography", "Live Performance Documentation"]
   },
   {
-    id: "corporate-brand-refresh",
-    title: "Corporate Brand Refresh",
-    description: "Rebranding and visual identity update for a growing tech company, including logo, website, and collateral.",
-    category: "branding",
+    id: "festival-post",
+    title: "Festival post",
+    description: "Creative festival and cultural event designs including New Year celebrations, religious festivals, and promotional campaigns for various occasions.",
+    category: "social",
     images: [
-      "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "/lovable-uploads/ab61b5b7-5859-46fd-ba32-dbc76c5b5e66.png",
+      "/lovable-uploads/c6c37ae4-91fd-46d7-95fd-51d6f4207b64.png",
+      "/lovable-uploads/bef08683-82d6-4f8e-84de-23252b54e74a.png",
+      "/lovable-uploads/a1a9d92e-ac41-4d08-9f2b-4a027486fdd3.png",
+      "/lovable-uploads/530cf5f0-277b-4c2f-95d1-64ef968f05ee.png",
+      "/lovable-uploads/dfdb0b0b-471f-4f81-9181-ef59a4f7d778.png"
     ],
-    client: "TechNova Solutions",
-    year: "2023",
-    services: ["Brand Strategy", "Logo Design", "Web Design"]
+    client: "Various Festivals",
+    year: "2022-2024",
+    services: ["Festival Design", "Cultural Event Graphics", "Promotional Campaigns"]
   },
   {
     id: "fashion-lookbook",
