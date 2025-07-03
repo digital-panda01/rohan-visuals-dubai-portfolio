@@ -64,11 +64,11 @@ const PortfolioProjectPage = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {project.images.map((image, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden flex items-center justify-center min-h-[400px]">
               <img
                 src={image}
                 alt={`${project.title} ${index + 1}`}
-                className="w-full h-auto object-contain"
+                className="max-w-full max-h-full object-contain"
               />
             </div>
           ))}

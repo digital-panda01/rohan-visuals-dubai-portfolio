@@ -20,15 +20,23 @@ export const portfolioProjects = [
   {
     id: "social-media-campaign",
     title: "Social Media Campaign",
-    description: "Instagram and Facebook content design for a local fashion boutique's seasonal campaign.",
+    description: "Creative social media designs for various events, businesses, and promotional campaigns including cultural events, business promotions, and seasonal offers.",
     category: "social",
     images: [
-      "https://images.unsplash.com/photo-1611926653458-09294b3142bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "/lovable-uploads/81c8fd53-638d-4372-94ca-a093db029b1e.png",
+      "/lovable-uploads/8bfaa693-c135-4d68-bcc8-16b9d419aa74.png",
+      "/lovable-uploads/263ba14f-a5a5-452b-b2dd-6af8cfc01542.png",
+      "/lovable-uploads/34a5eda8-7e20-4973-a88c-11965c38cb88.png",
+      "/lovable-uploads/57e3e40e-7390-4a6e-944d-210e1a93021d.png",
+      "/lovable-uploads/ff786510-93cf-4978-b2f5-9fbeb43e83b8.png",
+      "/lovable-uploads/e363db75-ca23-4c47-8f7d-645cea296a6b.png",
+      "/lovable-uploads/bebe8d71-4d31-4d07-8e82-4e19b4e8232f.png",
+      "/lovable-uploads/684614ac-9864-4861-825d-70f0f3cbe1e2.png",
+      "/lovable-uploads/99fceee3-8282-46c5-a1d8-63220c1302ed.png"
     ],
-    client: "Boutique Nepal",
-    year: "2023",
-    services: ["Social Media Design", "Content Strategy", "Brand Guidelines"]
+    client: "Various Clients",
+    year: "2022-2024",
+    services: ["Social Media Design", "Event Promotion", "Brand Campaigns", "Cultural Event Design"]
   },
   {
     id: "wedding-photography",
