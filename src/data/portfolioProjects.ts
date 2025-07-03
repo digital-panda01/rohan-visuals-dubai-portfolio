@@ -1,5 +1,3 @@
-
-
 export const portfolioProjects = [
   {
     id: "restaurant-branding",
@@ -7,14 +5,14 @@ export const portfolioProjects = [
     description: "Complete brand identity design for a modern restaurant including logo, menu design, and social media assets.",
     category: "branding",
     images: [
-      "/lovable-uploads/76c424d4-fcd9-4b6d-969b-1f64a4585347.png",
       "/lovable-uploads/1d557a63-6be7-4f27-b2cb-1b41082a004c.png",
+      "/lovable-uploads/1cf5658e-f86b-438d-b008-3fe8233c4798.png",
       "/lovable-uploads/0e7f018f-f405-4a82-b821-ddd71e1f0b4f.png",
       "/lovable-uploads/af8529ba-f286-496c-879b-3427bcbcfe65.png",
       "/lovable-uploads/d12d670f-bb58-42d2-8640-37e749210123.png",
       "/lovable-uploads/0ce35d0c-c825-4e3a-903f-b400d86dcdda.png",
       "/lovable-uploads/dbe8c002-6019-4f59-92cd-205ec1116bb6.png",
-      "/lovable-uploads/1cf5658e-f86b-438d-b008-3fe8233c4798.png"
+      "/lovable-uploads/76c424d4-fcd9-4b6d-969b-1f64a4585347.png"
     ],
     client: "Brotchen Bakery Cafe & The Home Side Cafe",
     year: "2023",
@@ -94,4 +92,3 @@ export const portfolioProjects = [
     services: ["Photography", "Art Direction", "Photo Editing"]
   }
 ];
-
