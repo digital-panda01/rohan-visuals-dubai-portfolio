@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -9,6 +8,11 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import PortfolioPage from "./pages/PortfolioPage";
 import PortfolioProjectPage from "./pages/PortfolioProjectPage";
+import AboutPage from './pages/AboutPage';
+import EducationPage from './pages/EducationPage';
+import ExperiencePage from './pages/ExperiencePage';
+import ServicesPage from './pages/ServicesPage';
+import ContactPage from './pages/ContactPage';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -32,6 +36,11 @@ const App = () => {
             <BrowserRouter>
               <Routes>
                 <Route path="/" element={<Index />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/education" element={<EducationPage />} />
+                <Route path="/experience" element={<ExperiencePage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/contact" element={<ContactPage />} />
                 <Route path="/portfolio" element={<PortfolioPage />} />
                 <Route path="/portfolio/:projectId" element={<PortfolioProjectPage />} />
                 <Route path="*" element={<NotFound />} />
