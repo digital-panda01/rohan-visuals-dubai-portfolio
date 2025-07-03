@@ -56,7 +56,7 @@ const PortfolioSection = () => {
             <span className="text-portfolio-accent font-semibold">Portfolio</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Featured Work
+            My Portfolio
           </h2>
           <p className="text-lg text-white max-w-3xl mx-auto">
             A curated selection of projects showcasing my expertise in branding, social media design, and photography across various industries.

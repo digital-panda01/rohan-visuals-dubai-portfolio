@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 const AboutSection = () => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: '-100px' });
   return (
-    <section id="about" className="py-20 bg-gray-800">
+    <motion.section
+      id="about"
+      className="py-20 bg-gray-800"
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
+    >
       <div className="max-w-7xl mx-auto container-padding">
         <h2 className="text-4xl font-bold text-white text-center mb-12">
           About Me
@@ -36,7 +46,7 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

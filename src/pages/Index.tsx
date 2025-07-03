@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
@@ -14,9 +13,9 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <HeroSection />
+      <ServicesSection />
       <AboutSection />
       <ExperienceSection />
-      <ServicesSection />
       <PortfolioSection />
       <ContactSection />
       <Footer />
