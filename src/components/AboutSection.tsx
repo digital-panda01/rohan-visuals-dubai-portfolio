@@ -1,3 +1,4 @@
+
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
@@ -41,8 +42,12 @@ const AboutSection = () => {
               </ul>
             </div>
           </div>
-          <div className="bg-gray-700 h-64 rounded-lg flex items-center justify-center">
-            <p className="text-gray-400">Photo placeholder</p>
+          <div className="flex justify-center">
+            <img
+              src="/lovable-uploads/4a67026b-d7d1-45b7-9cb0-75765e0cbb51.png"
+              alt="Rohan Maharjan portrait"
+              className="w-80 h-80 object-cover rounded-lg shadow-lg"
+            />
           </div>
         </div>
       </div>
