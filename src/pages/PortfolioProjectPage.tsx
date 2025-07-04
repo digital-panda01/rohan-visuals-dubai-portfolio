@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -64,15 +63,7 @@ const PortfolioProjectPage = () => {
         </div>
 
         {/* Featured Image Display */}
-        <div className="mb-8">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden flex items-center justify-center min-h-[500px]">
-            <img
-              src={project.images[selectedImage]}
-              alt={`${project.title} ${selectedImage + 1}`}
-              className="max-w-full max-h-full object-contain"
-            />
-          </div>
-        </div>
+        // Large preview removed as requested
 
         {/* Image Thumbnails */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">

@@ -94,7 +94,7 @@ export const portfolioProjects = [
   },
   {
     id: "fashion-lookbook",
-    title: "Fashion Lookbook Photography",
+    title: "Nature & Wildlife Photography",
     description: "Seasonal lookbook photoshoot for a boutique fashion label, featuring models and styled sets.",
     category: "photography",
     images: [
