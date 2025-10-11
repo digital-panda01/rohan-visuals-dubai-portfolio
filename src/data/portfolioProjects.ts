@@ -98,6 +98,10 @@ export const portfolioProjects = [
     description: "Capturing the beauty of nature and wildlife in their natural habitat, from majestic mountains to exotic animals.",
     category: "photography",
     images: [
+      "/lovable-uploads/1a0fe208-0a8c-446a-bf57-7ea3233b65a9.png",
+      "/lovable-uploads/64b5c226-d742-4e6f-ba17-adf1c91284ac.png",
+      "/lovable-uploads/d49e5cf2-a884-4178-9beb-c18ec54edcf5.png",
+      "/lovable-uploads/eda28c4d-4d50-4880-af67-dc5cc40a1532.png",
       "/lovable-uploads/befe8d71-4d31-4d07-8e82-4e19b4e8232f.png",
       "/lovable-uploads/dfdb0b0c-471f-4f81-9181-ef59a4f7d779.png",
       "/lovable-uploads/e363db76-ca23-4c47-8f7d-645cea296a6c.png",
