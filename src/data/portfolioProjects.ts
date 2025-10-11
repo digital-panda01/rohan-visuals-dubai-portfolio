@@ -95,14 +95,21 @@ export const portfolioProjects = [
   {
     id: "fashion-lookbook",
     title: "Nature & Wildlife Photography",
-    description: "Seasonal lookbook photoshoot for a boutique fashion label, featuring models and styled sets.",
+    description: "Capturing the beauty of nature and wildlife in their natural habitat, from majestic mountains to exotic animals.",
     category: "photography",
     images: [
-      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "/lovable-uploads/64b5c226-d742-4e6f-ba17-adf1c91284ac.png",
+      "/lovable-uploads/d49e5cf2-a884-4178-9beb-c18ec54edcf5.png",
+      "/lovable-uploads/eda28c4d-4d50-4880-af67-dc5cc40a1532.png",
+      "/lovable-uploads/befe8d71-4d31-4d07-8e82-4e19b4e8232f.png",
+      "/lovable-uploads/dfdb0b0c-471f-4f81-9181-ef59a4f7d779.png",
+      "/lovable-uploads/e363db76-ca23-4c47-8f7d-645cea296a6c.png",
+      "/lovable-uploads/99fceee4-8282-46c5-a1d8-63220c1302ee.png",
+      "/lovable-uploads/684614ad-9864-4861-825d-70f0f3cbe1e3.png",
+      "/lovable-uploads/bfe67a0b-88c4-40b6-8bd5-c67f319935f0.png"
     ],
-    client: "Urban Vogue",
-    year: "2023",
-    services: ["Photography", "Art Direction", "Photo Editing"]
+    client: "Various Nature Projects",
+    year: "2022-2024",
+    services: ["Wildlife Photography", "Nature Photography", "Landscape Photography"]
   }
 ];
